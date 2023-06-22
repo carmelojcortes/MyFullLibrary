@@ -25,8 +25,8 @@ let package = Package(
         .target(
             name: "MyFullLibrary",
             dependencies: [
-                "MyLibraryFramework",
-                "MyLibraryCoreFramework"
+                .product(name: "MyLibraryCore", package: "MyLibraryCoreFramework"),
+                .product(name: "MyLib", package: "MyLibraryFramework")
              ]
         ),
     ]
